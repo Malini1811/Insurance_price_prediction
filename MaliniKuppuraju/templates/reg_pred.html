@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-photo/family-figure-shape-stethoscope-with-copy-space_23-2148488223.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1713571200&semt=ais'); /* Replace 'background_image.jpg' with the path to your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 50px;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Insurance Prediction Form</h3>
+        <form action="/result" method="POST">
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <label for="sex">Sex:</label>
+            <select name="sex" required>
+                <option value =" "></option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+
+            <label for="bmi">BMI:</label>
+            <input type="number" name="bmi" step="0.01" required>
+
+            <label for="children">Children:</label>
+            <select name="children" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="smoker">Smoker:</label>
+            <select name="smoker" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="region_northwest">Region Northwest:</label>
+            <select name="region_northwest" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="region_southeast">Region Southeast:</label>
+            <select name="region_southeast" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="region_southwest">Region Southwest:</label>
+            <select name="region_southwest" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="result">
+            <h1>Result:</h1>
+            <h1><p>{{ prediction }}</p></h1>
+        </div>
+        <a href="{{ url_for('remdie') }}">processed for the remdie!</a>
+        <a href="{{ url_for('thanku') }}">If the charge is stasified no need of remdie! you can processed further.....</a>
+
+    </div>
+</body>
+</html>

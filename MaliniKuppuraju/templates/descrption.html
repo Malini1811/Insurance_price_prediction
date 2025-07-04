@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            background-image: url('https://img.freepik.com/premium-photo/health-insurance-family-concept-top-view-icon-family-umbrella-light-blue-background-3d-rendering_20693-1067.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .info-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #ff4c4c;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            padding-left: 20px;
+            list-style-position: inside;
+        }
+
+        li {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank you for your Registration</h1>
+        
+        <div class="info-box">
+            <h2>Terms and Conditions for Your Insurance Prediction</h2>
+            <p>Important features to consider while predicting your insurance cost:</p>
+            <ol>
+                <li>Age: Insurance premiums often increase with age due to higher health risks associated with aging. Younger individuals typically have lower premiums compared to older individuals.</li>
+                <li>Gender: In some insurance models, gender can influence premiums. For example, females may have different premium rates compared to males based on actuarial data related to health risks.</li>
+                <li>BMI (Body Mass Index): BMI is a measure of body fat based on height and weight. Higher BMI values may indicate higher health risks and could lead to higher insurance premiums.</li>
+                <li>Number of Children: Insurance costs can be affected by the number of dependents (such as children) covered under the policy. More dependents may result in higher premiums.</li>
+                <li>Smoking Status: Smokers generally have higher insurance premiums due to increased health risks associated with smoking.</li>
+                <li>Region: The geographical area where the insured person lives can impact insurance costs. Different regions may have varying healthcare costs and risk factors.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Next Steps</div>
+            <p>Please ensure to read the above and proceed for accurate insurance prediction.</p>
+            <!-- Add a link to navigate to reg_pred.html -->
+            <p>Proceed to the <a href="{{ url_for('reg_pred') }}">Insurance Prediction Form</a>.</p>
+        </div>
+
+    </div>
+</body>
+</html>

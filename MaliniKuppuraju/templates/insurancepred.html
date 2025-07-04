@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-photo/family-figure-shape-stethoscope-with-copy-space_23-2148488223.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #registration-form {
+            width: 300px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1; /* Ensure the form is above other elements */
+            position: relative; /* Set position to allow z-index to work */
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        /* Styling for the link */
+        #prediction-link {
+            color: #000000;
+            text-decoration: none;
+            opacity: 0.5;
+            pointer-events: none;
+            position: relative; /* Set position to allow z-index to work */
+            z-index: 2; /* Ensure the link is above the form */
+        }
+        #prediction-link:hover {
+            text-decoration: none;
+        }
+        #registration-message {
+            color: #ffffff;
+            font-weight: bolder;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function formValidate() {
+            var username = document.forms["registration"]["username"].value;
+            var phoneno = document.forms["registration"]["phoneno"].value;
+            var password = document.forms["registration"]["password"].value;
+            
+            if (username == "" || phoneno == "" || password == "") {
+                document.getElementById("registration-message").innerText = "Please fill in all fields to proceed.";
+                return false;
+            }
+            
+            var re = /^\d{10}$/;
+            if (!re.test(phoneno)) {
+                document.getElementById("registration-message").innerText = "Invalid phone number format.";
+                return false;
+            }
+            
+            if (password.length < 6) {
+                document.getElementById("registration-message").innerText = "Password must be at least 6 characters long.";
+                return false;
+            }
+            
+            // Clear any previous registration messages
+            document.getElementById("registration-message").innerText = "";
+            
+            // Display success message
+            document.getElementById("registration-message").innerText = "Registration successful!";
+            
+            // Redirect to the next page after a short delay
+            setTimeout(function() {
+                window.location.href = "{{ url_for('descrption')}}";
+            }, 2000); // Delay in milliseconds (2 seconds)
+            
+            return false; // Prevent form submission
+        }
+    </script>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div id="registration-form">
+        <form name="registration" onsubmit="return formValidate()">
+            Username:<br>
+            <input type="text" name="username"><br><br>
+            Phone Number:<br>
+            <input type="text" name="phoneno"><br><br>
+            Password:<br>
+            <input type="password" name="password"><br><br>
+            <input type="submit" value="Register">
+            <p id="registration-message"></p>
+        </form>
+    </div>
+</body>
+</html>
