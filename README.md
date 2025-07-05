@@ -82,9 +82,5 @@ Visit `http://127.0.0.1:5000/` in your browser.
 - Trained using: `insurance prediction.ipynb`
 - Saved as: `regression.pickle`
 
-## 💡 Future Improvements
 
-- Add model explainability (e.g., SHAP or LIME)
-- Improve model accuracy using ensemble methods
-- Secure input validation
 
