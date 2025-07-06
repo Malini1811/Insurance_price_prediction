@@ -1,8 +1,8 @@
-# 🏥 Insurance Cost Prediction Web App
+#  Insurance Cost Prediction Web App
 
 This is a Flask-based web application that predicts the **medical insurance charges** for individuals based on personal attributes such as age, BMI, number of children, smoking habits, and more. The model was trained using linear regression.
 
-## 🔍 Project Features
+##  Project Features
 
 - User-friendly web interface to input insurance details
 - Machine learning model predicts medical insurance costs
@@ -10,7 +10,7 @@ This is a Flask-based web application that predicts the **medical insurance char
 - Flask backend handles routing and prediction logic
 - Modular HTML templates (e.g., form page, result page, thank you page)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 insurance-prediction/
@@ -29,16 +29,16 @@ insurance-prediction/
 └── README.md                 # Project documentation
 ```
 
-## ⚙️ How to Run the Project
+## How to Run the Project
 
-### ✅ 1. Clone the Repository
+###  1. Clone the Repository
 
 ```bash
 git clone https://github.com/<your-username>/Customer_Transcation.git
 cd Customer_Transcation
 ```
 
-### ✅ 2. Set Up a Virtual Environment (Optional but recommended)
+###  2. Set Up a Virtual Environment (Optional but recommended)
 
 ```bash
 python -m venv venv
@@ -46,7 +46,7 @@ source venv/bin/activate     # On Linux/Mac
 venv\Scripts\activate      # On Windows
 ```
 
-### ✅ 3. Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -58,7 +58,7 @@ If `requirements.txt` is missing, use:
 pip install flask pandas numpy scikit-learn
 ```
 
-### ✅ 4. Run the Application
+###  4. Run the Application
 
 ```bash
 python app.py
@@ -66,7 +66,7 @@ python app.py
 
 Visit `http://127.0.0.1:5000/` in your browser.
 
-## 📊 Input Features Used for Prediction
+## Input Features Used for Prediction
 
 - Age
 - Sex (encoded)
@@ -76,7 +76,7 @@ Visit `http://127.0.0.1:5000/` in your browser.
 - Region (encoded)
 - Any other additional fields from your form
 
-## 📦 Model Details
+##  Model Details
 
 - Model Type: Linear Regression
 - Trained using: `insurance prediction.ipynb`
